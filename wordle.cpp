@@ -98,7 +98,6 @@ bool check_guess(string user_guess, string word)
 int main()
 {
     string word = word_select();
-    cout << word << endl;
 
     cout << "I am thinking of a 5 letter word. What's your guess faggot?\n";
     for (int guesses = 0; guesses < 5; guesses++)
@@ -107,10 +106,10 @@ int main()
         cin >> guess;
 
         // Assign return value from function into a variable 
-        bool penis = check_guess(guess, word);
+        bool correct_guess = check_guess(guess, word);
 
         // If word is correctly guessed, break the loop and outpout a nice message
-        if (penis)
+        if (correct_guess)
         {
             cout << "You guessed the word I was thinking of!" << endl; 
             break; 
